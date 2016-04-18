@@ -1,0 +1,10 @@
+{
+    "name": "pilulka/iterator",
+    "authors": [
+        {
+            "name": "Martin Krizan",
+            "email": "mnohosten@gmail.com"
+        }
+    ],
+    "require": {}
+}
