@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Pilulka\Iterators\Http;
+namespace Pilulka\Iterators\Http;
 
 class UrlIterator implements \Iterator
 {
