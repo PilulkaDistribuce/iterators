@@ -69,6 +69,7 @@ class UrlIterator implements \Iterator
     {
         $ch = curl_init($this->getIterationUrl());
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
         if($this->hasAuth) {
             curl_setopt($ch, CURLOPT_USERPWD, "{$this->username}:{$this->password}");
         }
