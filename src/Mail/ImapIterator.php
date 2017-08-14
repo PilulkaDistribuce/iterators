@@ -48,7 +48,7 @@ class ImapIterator implements \Iterator
      */
     public function setSort($sort)
     {
-        if(!in_array([self::SORT_DESC, self::SORT_ASC], $sort)) {
+        if(!array_search($sort, [self::SORT_DESC, self::SORT_ASC])) {
             throw new \InvalidArgumentException(
                 "Invalid sort type: `{$sort}`"
             );
