@@ -16,8 +16,7 @@ $iterator = new ImapIterator(
 $iterator->setFilter($cfg['filter']); // e.g. FROM "john@example.com"
 
 foreach ($iterator as $mail) {
-    /** @var \Pilulka\Iterators\Mail\Model\Mail $iterated */
-    $iterated = true;
+    /** @var \Pilulka\Iterators\Mail\Model\Mail $mail */
     foreach ($mail->getAttachments() as $attachment) {
         if($attachment->isAttachment()) {
             printf(
