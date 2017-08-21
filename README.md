@@ -82,7 +82,7 @@ foreach ($iterator as $mail) {
 
 ## Release notes
 
-This package fulfill our company needs - you should consider this package as an 
+This package fulfill our company needs - you should consider this as an 
  experimental.
  
 We will be pleasured for any feedback or provided pull request.
