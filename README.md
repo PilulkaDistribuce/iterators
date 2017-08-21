@@ -83,8 +83,8 @@ foreach ($iterator as $mail) {
 
 ## Release notes
 
-This package fulfill our company needs - if you will use it you may miss some 
- features. 
- Because of that - you should consider this package as experimental.
+This package fulfill our company needs - you should consider this package as an 
+ experimental.
  
-We will be pleasured for any feedback or provided pull request. 
+We will be pleasured for any feedback or provided pull request.
+ 
