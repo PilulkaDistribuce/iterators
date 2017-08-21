@@ -63,7 +63,7 @@ $iterator = new ImapIterator(
     $cfg['password']
 );
 $iterator->setFilter($cfg['filter']); // e.g. FROM "john@example.com"
-
+$i = 0;
 foreach ($iterator as $mail) {
     /** @var \Pilulka\Iterators\Mail\Model\Mail $mail */
     foreach ($mail->getAttachments() as $attachment) {
