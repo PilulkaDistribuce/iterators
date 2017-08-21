@@ -71,5 +71,12 @@ class JsonCollectionIterator implements \Iterator
         $this->urlIterator->rewind();
     }
 
+    /**
+     * @return UrlIterator
+     */
+    public function getUrlIterator()
+    {
+        return $this->urlIterator;
+    }
 
 }

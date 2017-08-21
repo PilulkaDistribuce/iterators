@@ -65,6 +65,14 @@ class UrlIterator implements \Iterator
         $this->requestCount = 0;
     }
 
+    public function getIterationUrl()
+    {
+        if(isset($this->urlClosure)) {
+            return call_user_func_array($this->urlClosure, [$this->urlMask, $this->requestCount]);
+        }
+        return sprintf($this->urlMask, $this->requestCount);
+    }
+
     private function loadUrlContent()
     {
         $ch = curl_init($this->getIterationUrl());
@@ -76,14 +84,6 @@ class UrlIterator implements \Iterator
         $this->response = curl_exec($ch);
         $this->responseCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
-    }
-
-    private function getIterationUrl()
-    {
-        if(isset($this->urlClosure)) {
-            return call_user_func_array($this->urlClosure, [$this->urlMask, $this->requestCount]);
-        }
-        return sprintf($this->urlMask, $this->requestCount);
     }
 
 
