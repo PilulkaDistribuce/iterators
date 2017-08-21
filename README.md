@@ -84,5 +84,5 @@ foreach ($iterator as $mail) {
 ## Release notes
 
 This package fulfill our company needs - if you will use it you may miss some 
- features. 
+ features. As it is - consider this package as experimental.
 We will be pleasured for any feedback or provided pull request. 
