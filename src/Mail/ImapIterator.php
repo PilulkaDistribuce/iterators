@@ -125,7 +125,7 @@ class ImapIterator implements \Iterator
 
     public function __destruct()
     {
-        if ($this->connection()) {
+        if ($this->connection) {
             imap_close($this->connection());
         }
     }
