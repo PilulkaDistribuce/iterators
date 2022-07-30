@@ -61,7 +61,7 @@ class ImapIterator implements \Iterator
     public function current()
     {
         $key = $this->iterator()->current();
-        $header = imap_header($this->connection(), $key);
+        $header = imap_headerinfo($this->connection(), $key);
         return new Mail(
             $key,
             $header->fromaddress,
