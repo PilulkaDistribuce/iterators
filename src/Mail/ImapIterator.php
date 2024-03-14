@@ -58,7 +58,7 @@ class ImapIterator implements \Iterator
 
 
 
-    public function current()
+    public function current(): mixed
     {
         $key = $this->iterator()->current();
         $header = imap_headerinfo($this->connection(), $key);
@@ -73,24 +73,24 @@ class ImapIterator implements \Iterator
         );
     }
 
-    public function next()
+    public function next(): void
     {
-        return $this->iterator()->next();
+        $this->iterator()->next();
     }
 
-    public function key()
+    public function key(): mixed
     {
         return $this->iterator()->key();
     }
 
-    public function valid()
+    public function valid(): bool
     {
         return $this->iterator()->valid();
     }
 
-    public function rewind()
+    public function rewind(): void
     {
-        return $this->iterator()->rewind();
+        $this->iterator()->rewind();
     }
 
     private function connection()
